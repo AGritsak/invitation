@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Свадьба · Александр & София</title>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@200;300&display=swap"
+		rel="stylesheet">
+	<style>
+		:root {
+			--ink: #2C2418;
+			--ink2: #5A4A38;
+			--cream: #F5F0E8;
+			--linen: #EDE5D5;
+			--rule: rgba(44, 36, 24, 0.15);
+		}
+
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			background: var(--cream);
+			font-family: 'Cormorant Garamond', serif;
+			font-weight: 300;
+			color: var(--ink);
+			-webkit-font-smoothing: antialiased;
+		}
+
+		.page {
+			max-width: 520px;
+			margin: 0 auto;
+			padding-bottom: 80px;
+		}
+
+		/* ── HERO ── */
+		.hero {
+			padding: 64px 48px 32px;
+			text-align: center;
+		}
+
+		.eyebrow {
+			display: block;
+			font-family: 'Jost', sans-serif;
+			font-weight: 300;
+			font-size: 14px;
+			/* ПРАВКА 1: крупнее */
+			letter-spacing: 0.35em;
+			text-transform: uppercase;
+			color: var(--ink);
+			/* ПРАВКА 1: темнее */
+			opacity: 0.85;
+			margin-bottom: 32px;
+		}
+
+		.names {
+			font-family: 'Caveat', cursive;
+			font-size: 78px;
+			font-weight: 700;
+			line-height: 0.88;
+			color: var(--ink);
+		}
+
+		.names .amp {
+			display: block;
+			font-size: 50px;
+			font-weight: 400;
+			color: var(--ink2);
+			margin: 6px 0;
+		}
+
+		/* ПРАВКА 3: дата крупнее */
+		.hero-date {
+			margin-top: 28px;
+			font-family: 'Caveat', cursive;
+			font-size: 34px;
+			font-weight: 600;
+			color: var(--ink);
+		}
+
+		.hero-tagline {
+			margin-top: 6px;
+			font-family: 'Jost', sans-serif;
+			font-weight: 200;
+			font-size: 10px;
+			letter-spacing: 0.3em;
+			text-transform: uppercase;
+			color: var(--ink2);
+			opacity: 0.45;
+		}
+
+		/* ── WAVY RULE (ПРАВКА 4) ── */
+		.wave-rule {
+			display: block;
+			width: 100%;
+			margin: 6px 0;
+		}
+
+		/* ── SECTION ── */
+		.section {
+			padding: 40px 52px;
+			text-align: center;
+		}
+
+		.section-title {
+			font-family: 'Caveat', cursive;
+			font-size: 30px;
+			font-weight: 600;
+			color: var(--ink);
+			margin-bottom: 18px;
+			display: block;
+		}
+
+		p {
+			font-family: 'Cormorant Garamond', serif;
+			font-size: 17px;
+			font-weight: 300;
+			line-height: 1.75;
+			color: var(--ink2);
+			margin-bottom: 10px;
+		}
+
+		p.small {
+			font-family: 'Jost', sans-serif;
+			font-weight: 200;
+			font-size: 13px;
+			line-height: 1.8;
+			letter-spacing: 0.02em;
+		}
+
+		/* ── TIMELINE ── */
+		.tl {
+			list-style: none;
+			text-align: left;
+			margin-top: 24px;
+		}
+
+		.tl li {
+			display: grid;
+			grid-template-columns: 50px 1fr;
+			gap: 18px;
+			padding: 14px 0;
+			border-bottom: 1px solid var(--rule);
+			align-items: start;
+		}
+
+		.tl li:last-child {
+			border-bottom: none;
+		}
+
+		.tl-time {
+			font-family: 'Caveat', cursive;
+			font-size: 22px;
+			color: var(--ink);
+			line-height: 1.1;
+			padding-top: 2px;
+		}
+
+		.tl-name {
+			font-family: 'Cormorant Garamond', serif;
+			font-size: 17px;
+			font-weight: 400;
+			color: var(--ink);
+			line-height: 1.3;
+			margin-bottom: 3px;
+		}
+
+		.tl-desc {
+			font-family: 'Jost', sans-serif;
+			font-size: 11px;
+			font-weight: 200;
+			color: var(--ink2);
+			line-height: 1.6;
+			margin: 0;
+			opacity: 0.7;
+		}
+
+		/* ── SWATCHES ── */
+		.swatches {
+			display: flex;
+			justify-content: center;
+			gap: 16px;
+			margin: 28px 0 0;
+			flex-wrap: wrap;
+		}
+
+		.sw {
+			text-align: center;
+		}
+
+		.sw-dot {
+			width: 38px;
+			height: 38px;
+			border-radius: 50%;
+			margin: 0 auto 8px;
+			border: 1px solid rgba(44, 36, 24, 0.08);
+		}
+
+		.sw-name {
+			font-family: 'Jost', sans-serif;
+			font-weight: 200;
+			font-size: 10px;
+			color: var(--ink2);
+			opacity: 0.65;
+			letter-spacing: 0.04em;
+		}
+
+		/* ── REFS CAROUSEL (ПРАВКА 5) ── */
+		.refs-outer {
+			margin-top: 32px;
+		}
+
+		.refs-col-label {
+			font-family: 'Jost', sans-serif;
+			font-weight: 200;
+			font-size: 10px;
+			letter-spacing: 0.3em;
+			text-transform: uppercase;
+			color: var(--ink2);
+			opacity: 0.5;
+			margin-bottom: 10px;
+			display: block;
+		}
+
+		.refs-intro {
+			font-family: 'Jost', sans-serif;
+			font-weight: 200;
+			font-size: 11px;
+			color: var(--ink2);
+			opacity: 0.55;
+			letter-spacing: 0.05em;
+			margin-bottom: 20px;
+			line-height: 1.7;
+		}
+
+		.carousel-wrap {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 12px;
+		}
+
+		.carousel-col {
+			position: relative;
+			overflow: hidden;
+		}
+
+		.carousel-track {
+			display: flex;
+			transition: transform 0.35s ease;
+			cursor: grab;
+			user-select: none;
+		}
+
+		.carousel-track:active {
+			cursor: grabbing;
+		}
+
+		.ref-slide {
+			min-width: 100%;
+			background: var(--linen);
+			border: 1px solid var(--rule);
+			padding: 18px 12px 14px;
+			text-align: center;
+			flex-shrink: 0;
+		}
+
+		.ref-slide svg {
+			display: block;
+			margin: 0 auto;
+		}
+
+		.ref-label {
+			font-family: 'Jost', sans-serif;
+			font-weight: 200;
+			font-size: 10px;
+			color: var(--ink2);
+			opacity: 0.6;
+			margin-top: 10px;
+			display: block;
+			letter-spacing: 0.05em;
+		}
+
+		.carousel-dots {
+			display: flex;
+			justify-content: center;
+			gap: 5px;
+			margin-top: 8px;
+		}
+
+		.carousel-dots span {
+			width: 5px;
+			height: 5px;
+			border-radius: 50%;
+			background: var(--ink);
+			opacity: 0.2;
+			transition: opacity 0.2s;
+		}
+
+		.carousel-dots span.active {
+			opacity: 0.6;
+		}
+
+		/* ── RSVP (ПРАВКА 6 — шире) ── */
+		.rsvp-box {
+			background: var(--linen);
+			border: 1px solid var(--rule);
+			padding: 40px 48px;
+			text-align: center;
+			margin: 0 0;
+			/* шире — без боковых отступов */
+		}
+
+		.rsvp-box h3 {
+			font-family: 'Caveat', cursive;
+			font-size: 26px;
+			font-weight: 600;
+			color: var(--ink);
+			margin-bottom: 16px;
+		}
+
+		.form-row {
+			margin-top: 20px;
+			text-align: left;
+		}
+
+		.form-row label {
+			font-family: 'Jost', sans-serif;
+			font-weight: 200;
+			font-size: 11px;
+			letter-spacing: 0.1em;
+			text-transform: uppercase;
+			color: var(--ink2);
+			opacity: 0.6;
+			display: block;
+			margin-bottom: 6px;
+		}
+
+		.form-row input,
+		.form-row select,
+		.form-row textarea {
+			width: 100%;
+			background: transparent;
+			border: none;
+			border-bottom: 1px solid var(--rule);
+			font-family: 'Cormorant Garamond', serif;
+			font-size: 17px;
+			font-weight: 300;
+			color: var(--ink);
+			padding: 8px 0;
+			outline: none;
+			appearance: none;
+		}
+
+		.form-row textarea {
+			resize: none;
+			height: 60px;
+			border: 1px solid var(--rule);
+			padding: 8px;
+			margin-top: 2px;
+		}
+
+		.form-submit {
+			margin-top: 28px;
+			width: 100%;
+			background: var(--ink);
+			color: var(--cream);
+			border: none;
+			font-family: 'Jost', sans-serif;
+			font-weight: 200;
+			font-size: 12px;
+			letter-spacing: 0.3em;
+			text-transform: uppercase;
+			padding: 14px 0;
+			cursor: pointer;
+			transition: opacity 0.2s;
+		}
+
+		.form-submit:hover {
+			opacity: 0.75;
+		}
+
+		.form-success {
+			display: none;
+			font-family: 'Cormorant Garamond', serif;
+			font-style: italic;
+			font-size: 20px;
+			color: var(--ink2);
+			margin-top: 16px;
+		}
+
+		/* ── ALCOHOL POLL (ПРАВКА 7) ── */
+		.poll-options {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+			margin-top: 20px;
+		}
+
+		.poll-option {
+			display: flex;
+			align-items: center;
+			gap: 12px;
+			cursor: pointer;
+			padding: 12px 16px;
+			border: 1px solid var(--rule);
+			background: transparent;
+			transition: background 0.2s;
+			font-family: 'Cormorant Garamond', serif;
+			font-size: 17px;
+			color: var(--ink2);
+		}
+
+		.poll-option:hover {
+			background: rgba(44, 36, 24, 0.04);
+		}
+
+		.poll-option.selected {
+			background: rgba(44, 36, 24, 0.07);
+			border-color: var(--ink);
+		}
+
+		.poll-check {
+			width: 18px;
+			height: 18px;
+			border: 1px solid var(--rule);
+			border-radius: 50%;
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transition: all 0.2s;
+		}
+
+		.poll-option.selected .poll-check {
+			background: var(--ink);
+			border-color: var(--ink);
+		}
+
+		.poll-check::after {
+			content: '';
+			width: 6px;
+			height: 6px;
+			border-radius: 50%;
+			background: var(--cream);
+			display: none;
+		}
+
+		.poll-option.selected .poll-check::after {
+			display: block;
+		}
+
+		/* ── MAP (ПРАВКА 8) ── */
+		.map-wrap {
+			margin: 0 0;
+			border: 1px solid var(--rule);
+			overflow: hidden;
+		}
+
+		.map-wrap iframe {
+			width: 100%;
+			height: 280px;
+			border: none;
+			display: block;
+		}
+
+		.map-label {
+			padding: 14px 20px;
+			background: var(--linen);
+			font-family: 'Jost', sans-serif;
+			font-weight: 200;
+			font-size: 11px;
+			letter-spacing: 0.1em;
+			color: var(--ink2);
+			opacity: 0.7;
+			display: flex;
+			align-items: center;
+			gap: 8px;
+		}
+
+		/* ── FOOTER ── */
+		footer {
+			text-align: center;
+			padding: 56px 48px 48px;
+		}
+
+		.footer-sub {
+			font-family: 'Jost', sans-serif;
+			font-weight: 200;
+			font-size: 10px;
+			letter-spacing: 0.3em;
+			text-transform: uppercase;
+			color: var(--ink2);
+			opacity: 0.4;
+			margin-top: 24px;
+			display: block;
+		}
+
+		/* status messages */
+		.status-msg {
+			font-family: 'Cormorant Garamond', serif;
+			font-style: italic;
+			font-size: 16px;
+			color: var(--ink2);
+			margin-top: 12px;
+			min-height: 24px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="page">
+
+		<!-- ══ HERO ══ -->
+		<div class="hero">
+			<span class="eyebrow">Приглашение на свадьбу</span>
+
+			<!-- PHOTO STRIP — beanie guy + long-hair girl -->
+			<svg viewBox="0 0 280 380" fill="none" xmlns="http://www.w3.org/2000/svg"
+				style="width:210px;display:block;margin:0 auto 28px;">
+				<defs>
+					<filter id="jitter">
+						<feTurbulence type="turbulence" baseFrequency="0.065" numOctaves="3" seed="7" result="n" />
+						<feDisplacementMap in="SourceGraphic" in2="n" scale="1.5" xChannelSelector="R"
+							yChannelSelector="G" />
+					</filter>
+				</defs>
+				<g filter="url(#jitter)">
+					<!-- frame -->
+					<rect x="10" y="8" width="260" height="364" rx="5" stroke="#2C2418" stroke-width="2"
+						fill="#F5F0E8" />
+					<path d="M132 16 Q140 10 148 16 Q140 24 132 16Z" fill="#2C2418" opacity="0.35" />
+					<line x1="16" y1="136" x2="264" y2="136" stroke="#2C2418" stroke-width="1.2" />
+					<line x1="16" y1="252" x2="264" y2="252" stroke="#2C2418" stroke-width="1.2" />
+					<path d="M90 366 Q140 374 190 366" stroke="#2C2418" stroke-width="1" fill="none" opacity="0.4" />
+
+					<!-- FRAME 1: guy (ПРАВКА 2: шапка бини) + surprised girl -->
+					<!-- guy head -->
+					<ellipse cx="78" cy="56" rx="22" ry="24" stroke="#2C2418" stroke-width="1.8" fill="#F5F0E8" />
+					<!-- BEANIE — плотно облегает голову, закрывает уши, складка сверху -->
+					<path d="M56 52 Q57 34 78 30 Q99 34 100 52" stroke="#2C2418" stroke-width="2" fill="#2C2418"
+						fill-opacity="0.12" />
+					<path d="M56 52 Q57 34 78 30 Q99 34 100 52" stroke="#2C2418" stroke-width="1.8" fill="none" />
+					<!-- ribbed band at bottom of beanie -->
+					<path d="M56 52 Q78 56 100 52" stroke="#2C2418" stroke-width="1.8" fill="none" />
+					<path d="M57 55 Q78 59 99 55" stroke="#2C2418" stroke-width="1" fill="none" opacity="0.4" />
+					<!-- pom-pom -->
+					<circle cx="78" cy="28" r="5" stroke="#2C2418" stroke-width="1.4" fill="#2C2418"
+						fill-opacity="0.1" />
+					<path d="M74 28 Q78 24 82 28 Q78 32 74 28Z" fill="#2C2418" opacity="0.2" />
+					<!-- glasses -->
+					<rect x="62" y="54" width="11" height="8" rx="2" stroke="#2C2418" stroke-width="1.4" fill="none" />
+					<rect x="77" y="54" width="11" height="8" rx="2" stroke="#2C2418" stroke-width="1.4" fill="none" />
+					<line x1="73" y1="58" x2="77" y2="58" stroke="#2C2418" stroke-width="1.2" />
+					<line x1="62" y1="58" x2="60" y2="58" stroke="#2C2418" stroke-width="1.2" />
+					<line x1="88" y1="58" x2="90" y2="58" stroke="#2C2418" stroke-width="1.2" />
+					<!-- beard -->
+					<path d="M58 70 Q62 80 78 82 Q94 80 98 70" stroke="#2C2418" stroke-width="1.3" fill="none" />
+					<path d="M59 72 Q68 78 78 80 Q88 78 97 72" fill="#2C2418" opacity="0.07" stroke="none" />
+					<!-- smile -->
+					<path d="M68 68 Q78 74 88 68" stroke="#2C2418" stroke-width="1.3" fill="none"
+						stroke-linecap="round" />
+					<!-- eyes -->
+					<circle cx="70" cy="59" r="1.8" fill="#2C2418" />
+					<circle cx="85" cy="59" r="1.8" fill="#2C2418" />
+					<!-- body -->
+					<path d="M78 82 Q75 102 70 122 Q65 132 60 136" stroke="#2C2418" stroke-width="1.8" fill="none"
+						stroke-linecap="round" />
+					<path d="M50 92 Q40 110 42 126 Q50 134 60 136" stroke="#2C2418" stroke-width="1.6" fill="none" />
+					<path d="M50 92 Q56 84 64 82 Q70 80 78 82" stroke="#2C2418" stroke-width="1.6" fill="none" />
+
+					<!-- girl frame1 -->
+					<ellipse cx="205" cy="54" rx="24" ry="26" stroke="#2C2418" stroke-width="1.8" fill="#F5F0E8" />
+					<path d="M181 46 Q174 62 176 84 Q178 104 182 122 Q185 132 187 136" stroke="#2C2418"
+						stroke-width="2.2" fill="none" stroke-linecap="round" />
+					<path d="M229 46 Q236 64 234 88 Q232 108 230 126 Q228 133 227 136" stroke="#2C2418"
+						stroke-width="2.2" fill="none" stroke-linecap="round" />
+					<path d="M183 30 Q205 20 227 30 Q230 38 229 46" stroke="#2C2418" stroke-width="1.8" fill="none" />
+					<circle cx="196" cy="52" r="4.5" stroke="#2C2418" stroke-width="1.4" fill="none" />
+					<circle cx="214" cy="52" r="4.5" stroke="#2C2418" stroke-width="1.4" fill="none" />
+					<circle cx="196" cy="52" r="2" fill="#2C2418" />
+					<circle cx="214" cy="52" r="2" fill="#2C2418" />
+					<ellipse cx="205" cy="66" rx="5" ry="4.5" stroke="#2C2418" stroke-width="1.4" fill="none" />
+					<path d="M192 100 Q172 98 155 96 Q140 94 125 96" stroke="#2C2418" stroke-width="1.8" fill="none"
+						stroke-linecap="round" />
+					<path d="M125 96 L116 91" stroke="#2C2418" stroke-width="1.4" stroke-linecap="round" />
+					<path d="M125 96 L118 97" stroke="#2C2418" stroke-width="1.4" stroke-linecap="round" />
+					<path d="M125 96 L120 102" stroke="#2C2418" stroke-width="1.4" stroke-linecap="round" />
+					<path d="M205 78 Q200 96 196 118 Q193 130 192 136" stroke="#2C2418" stroke-width="1.8" fill="none"
+						stroke-linecap="round" />
+
+					<!-- FRAME 2: both laughing — GUY beanie -->
+					<ellipse cx="78" cy="192" rx="22" ry="23" stroke="#2C2418" stroke-width="1.8" fill="#F5F0E8" />
+					<!-- beanie frame2 -->
+					<path d="M56 188 Q57 170 78 166 Q99 170 100 188" stroke="#2C2418" stroke-width="2" fill="#2C2418"
+						fill-opacity="0.12" />
+					<path d="M56 188 Q57 170 78 166 Q99 170 100 188" stroke="#2C2418" stroke-width="1.8" fill="none" />
+					<path d="M56 188 Q78 192 100 188" stroke="#2C2418" stroke-width="1.8" fill="none" />
+					<path d="M57 191 Q78 195 99 191" stroke="#2C2418" stroke-width="1" fill="none" opacity="0.4" />
+					<circle cx="78" cy="164" r="5" stroke="#2C2418" stroke-width="1.4" fill="#2C2418"
+						fill-opacity="0.1" />
+					<rect x="62" y="192" width="11" height="8" rx="2" stroke="#2C2418" stroke-width="1.4" fill="none" />
+					<rect x="77" y="192" width="11" height="8" rx="2" stroke="#2C2418" stroke-width="1.4" fill="none" />
+					<line x1="73" y1="196" x2="77" y2="196" stroke="#2C2418" stroke-width="1.2" />
+					<path d="M58 206 Q62 216 78 218 Q94 216 98 206" stroke="#2C2418" stroke-width="1.3" fill="none" />
+					<path d="M59 208 Q68 214 78 216 Q88 214 97 208" fill="#2C2418" opacity="0.07" stroke="none" />
+					<path d="M63 193 Q70 189 77 193" stroke="#2C2418" stroke-width="1.4" fill="none"
+						stroke-linecap="round" />
+					<path d="M80 193 Q87 189 94 193" stroke="#2C2418" stroke-width="1.4" fill="none"
+						stroke-linecap="round" />
+					<path d="M66 204 Q78 212 90 204" stroke="#2C2418" stroke-width="1.4" fill="none"
+						stroke-linecap="round" />
+					<path d="M78 216 Q75 234 70 248 Q66 252 60 252" stroke="#2C2418" stroke-width="1.8" fill="none" />
+					<path d="M50 226 Q40 242 42 252 L60 252" stroke="#2C2418" stroke-width="1.6" fill="none" />
+					<path d="M50 226 Q57 218 65 216 Q70 215 78 216" stroke="#2C2418" stroke-width="1.6" fill="none" />
+
+					<!-- girl frame2 -->
+					<ellipse cx="205" cy="192" rx="24" ry="25" stroke="#2C2418" stroke-width="1.8" fill="#F5F0E8" />
+					<path d="M181 182 Q174 198 176 220 Q178 238 182 250 Q185 252 187 252" stroke="#2C2418"
+						stroke-width="2.2" fill="none" stroke-linecap="round" />
+					<path d="M229 182 Q236 200 234 224 Q232 242 230 252 Q228 252 227 252" stroke="#2C2418"
+						stroke-width="2.2" fill="none" stroke-linecap="round" />
+					<path d="M183 166 Q205 156 227 166 Q230 174 229 182" stroke="#2C2418" stroke-width="1.8"
+						fill="none" />
+					<path d="M192 190 Q199 186 206 190" stroke="#2C2418" stroke-width="1.4" fill="none"
+						stroke-linecap="round" />
+					<path d="M208 190 Q215 186 222 190" stroke="#2C2418" stroke-width="1.4" fill="none"
+						stroke-linecap="round" />
+					<path d="M196 205 Q205 213 214 205" stroke="#2C2418" stroke-width="1.4" fill="none"
+						stroke-linecap="round" />
+					<path d="M196 205 Q200 212 205 214 Q210 212 214 205" fill="#2C2418" opacity="0.08" />
+					<path d="M196 218 Q199 210 204 207" stroke="#2C2418" stroke-width="1.8" fill="none"
+						stroke-linecap="round" />
+					<path
+						d="M188 226 Q192 218 198 213 Q204 209 208 211 Q212 214 208 220 Q204 226 198 230 Q192 232 188 226Z"
+						stroke="#2C2418" stroke-width="1.4" fill="#F5F0E8" />
+					<path d="M198 213 L200 205" stroke="#2C2418" stroke-width="1.2" stroke-linecap="round" />
+					<path d="M202 212 L205 204" stroke="#2C2418" stroke-width="1.2" stroke-linecap="round" />
+					<path d="M206 212 L210 205" stroke="#2C2418" stroke-width="1.2" stroke-linecap="round" />
+					<path d="M205 228 Q200 242 196 252" stroke="#2C2418" stroke-width="1.8" fill="none" />
+
+					<!-- FRAME 3: kiss — GUY beanie -->
+					<ellipse cx="90" cy="308" rx="24" ry="22" stroke="#2C2418" stroke-width="1.8" fill="#F5F0E8" />
+					<!-- beanie frame3 -->
+					<path d="M66 304 Q67 284 90 280 Q113 284 114 304" stroke="#2C2418" stroke-width="2" fill="#2C2418"
+						fill-opacity="0.12" />
+					<path d="M66 304 Q67 284 90 280 Q113 284 114 304" stroke="#2C2418" stroke-width="1.8" fill="none" />
+					<path d="M66 304 Q90 308 114 304" stroke="#2C2418" stroke-width="1.8" fill="none" />
+					<path d="M67 307 Q90 311 113 307" stroke="#2C2418" stroke-width="1" fill="none" opacity="0.4" />
+					<circle cx="90" cy="278" r="5" stroke="#2C2418" stroke-width="1.4" fill="#2C2418"
+						fill-opacity="0.1" />
+					<rect x="76" y="308" width="11" height="8" rx="2" stroke="#2C2418" stroke-width="1.4" fill="none" />
+					<rect x="91" y="308" width="11" height="8" rx="2" stroke="#2C2418" stroke-width="1.4" fill="none" />
+					<line x1="87" y1="312" x2="91" y2="312" stroke="#2C2418" stroke-width="1.2" />
+					<path d="M68 322 Q72 330 90 332 Q108 330 112 322" stroke="#2C2418" stroke-width="1.3" fill="none" />
+					<path d="M69 324 Q78 328 90 330 Q102 328 111 324" fill="#2C2418" opacity="0.07" />
+					<path d="M79 310 Q86 307 93 310" stroke="#2C2418" stroke-width="1.4" fill="none"
+						stroke-linecap="round" />
+					<path d="M96 310 Q103 307 110 310" stroke="#2C2418" stroke-width="1.4" fill="none"
+						stroke-linecap="round" />
+					<path d="M114 328 Q132 323 148 320 Q160 318 170 318" stroke="#2C2418" stroke-width="1.8" fill="none"
+						stroke-linecap="round" />
+					<path d="M170 318 L178 313 L177 320 L175 326 L170 318Z" stroke="#2C2418" stroke-width="1.4"
+						fill="#F5F0E8" stroke-linejoin="round" />
+					<path d="M76 330 Q68 348 60 364" stroke="#2C2418" stroke-width="1.8" fill="none"
+						stroke-linecap="round" />
+					<path d="M44 340 Q36 355 40 364 L60 364" stroke="#2C2418" stroke-width="1.6" fill="none" />
+
+					<!-- girl frame3 -->
+					<ellipse cx="208" cy="310" rx="26" ry="24" stroke="#2C2418" stroke-width="1.8" fill="#F5F0E8" />
+					<path d="M182 300 Q174 318 176 340 Q178 354 182 364" stroke="#2C2418" stroke-width="2.2" fill="none"
+						stroke-linecap="round" />
+					<path d="M234 300 Q242 320 240 344 Q238 358 236 364" stroke="#2C2418" stroke-width="2.2" fill="none"
+						stroke-linecap="round" />
+					<path d="M184 285 Q208 275 232 285 Q235 294 234 300" stroke="#2C2418" stroke-width="1.8"
+						fill="none" />
+					<path d="M196 308 Q203 304 210 308" stroke="#2C2418" stroke-width="1.4" fill="none"
+						stroke-linecap="round" />
+					<path d="M212 308 Q219 304 226 308" stroke="#2C2418" stroke-width="1.4" fill="none"
+						stroke-linecap="round" />
+					<path d="M200 322 Q208 328 216 322" stroke="#2C2418" stroke-width="1.3" fill="none"
+						stroke-linecap="round" />
+					<path d="M208 334 Q200 350 196 364" stroke="#2C2418" stroke-width="1.8" fill="none"
+						stroke-linecap="round" />
+					<path d="M208 334 Q216 350 220 364" stroke="#2C2418" stroke-width="1.8" fill="none"
+						stroke-linecap="round" />
+				</g>
+			</svg>
+
+			<div class="names">Александр<span class="amp">&</span>София</div>
+			<div class="hero-date">14.08.2026</div>
+		</div>
+
+		<!-- WAVY RULE -->
+		<svg class="wave-rule" viewBox="0 0 520 18" fill="none">
+			<path d="M0 9 Q65 3 130 9 Q195 15 260 9 Q325 3 390 9 Q455 15 520 9" stroke="#2C2418" stroke-width="1.2"
+				fill="none" opacity="0.2" stroke-linecap="round" />
+		</svg>
+
+		<!-- ══ ПРИВЕТ ══ -->
+		<div class="section">
+			<span class="section-title">Привет, дорогой человек</span>
+
+			<!-- lace on rope -->
+			<svg viewBox="0 0 380 85" fill="none" xmlns="http://www.w3.org/2000/svg"
+				style="width:100%;max-width:380px;display:block;margin:0 auto 22px;">
+				<defs>
+					<pattern id="lp" x="0" y="0" width="9" height="9" patternUnits="userSpaceOnUse">
+						<circle cx="4.5" cy="4.5" r="1.6" fill="none" stroke="#8B6B4A" stroke-width="0.6"
+							opacity="0.4" />
+						<circle cx="0" cy="0" r="0.7" fill="none" stroke="#8B6B4A" stroke-width="0.4" opacity="0.18" />
+						<circle cx="9" cy="0" r="0.7" fill="none" stroke="#8B6B4A" stroke-width="0.4" opacity="0.18" />
+						<circle cx="0" cy="9" r="0.7" fill="none" stroke="#8B6B4A" stroke-width="0.4" opacity="0.18" />
+						<circle cx="9" cy="9" r="0.7" fill="none" stroke="#8B6B4A" stroke-width="0.4" opacity="0.18" />
+					</pattern>
+				</defs>
+				<rect x="13" y="12" width="4" height="68" rx="1" fill="#8B6B4A" opacity="0.28" />
+				<rect x="363" y="12" width="4" height="68" rx="1" fill="#8B6B4A" opacity="0.28" />
+				<path d="M17 15 Q190 27 363 15" stroke="#8B6B4A" stroke-width="1" fill="none" opacity="0.4" />
+				<rect x="30" y="15" width="15" height="58" rx="1" fill="url(#lp)" stroke="#8B6B4A" stroke-width="0.8"
+					opacity="0.6" />
+				<path d="M30 73 Q34 80 38 73 Q42 66 45 73" stroke="#8B6B4A" stroke-width="0.8" fill="none"
+					opacity="0.45" />
+				<rect x="60" y="15" width="12" height="48" rx="1" fill="url(#lp)" stroke="#8B6B4A" stroke-width="0.8"
+					opacity="0.52" />
+				<path d="M60 63 Q64 69 66 63 Q69 57 72 63" stroke="#8B6B4A" stroke-width="0.8" fill="none"
+					opacity="0.4" />
+				<rect x="88" y="16" width="20" height="62" rx="1" fill="url(#lp)" stroke="#8B6B4A" stroke-width="0.8"
+					opacity="0.62" />
+				<path d="M88 78 Q93 85 98 78 Q103 71 108 78" stroke="#8B6B4A" stroke-width="0.8" fill="none"
+					opacity="0.45" />
+				<rect x="124" y="16" width="14" height="52" rx="1" fill="url(#lp)" stroke="#8B6B4A" stroke-width="0.8"
+					opacity="0.55" />
+				<path d="M124 68 Q128 74 131 68 Q135 62 138 68" stroke="#8B6B4A" stroke-width="0.8" fill="none"
+					opacity="0.4" />
+				<rect x="155" y="17" width="22" height="60" rx="1" fill="url(#lp)" stroke="#8B6B4A" stroke-width="0.8"
+					opacity="0.62" />
+				<path d="M155 77 Q161 84 166 77 Q172 70 177 77" stroke="#8B6B4A" stroke-width="0.8" fill="none"
+					opacity="0.45" />
+				<rect x="194" y="16" width="15" height="47" rx="1" fill="url(#lp)" stroke="#8B6B4A" stroke-width="0.8"
+					opacity="0.52" />
+				<path d="M194 63 Q198 69 201 63 Q205 57 209 63" stroke="#8B6B4A" stroke-width="0.8" fill="none"
+					opacity="0.4" />
+				<rect x="225" y="15" width="19" height="55" rx="1" fill="url(#lp)" stroke="#8B6B4A" stroke-width="0.8"
+					opacity="0.58" />
+				<path d="M225 70 Q230 76 234 70 Q239 64 244 70" stroke="#8B6B4A" stroke-width="0.8" fill="none"
+					opacity="0.45" />
+				<rect x="261" y="16" width="13" height="44" rx="1" fill="url(#lp)" stroke="#8B6B4A" stroke-width="0.8"
+					opacity="0.5" />
+				<path d="M261 60 Q265 66 267 60 Q270 54 274 60" stroke="#8B6B4A" stroke-width="0.8" fill="none"
+					opacity="0.38" />
+				<rect x="290" y="15" width="17" height="52" rx="1" fill="url(#lp)" stroke="#8B6B4A" stroke-width="0.8"
+					opacity="0.55" />
+				<path d="M290 67 Q295 73 298 67 Q302 61 307 67" stroke="#8B6B4A" stroke-width="0.8" fill="none"
+					opacity="0.4" />
+				<rect x="324" y="16" width="13" height="42" rx="1" fill="url(#lp)" stroke="#8B6B4A" stroke-width="0.8"
+					opacity="0.48" />
+				<path d="M324 58 Q328 63 331 58 Q334 53 337 58" stroke="#8B6B4A" stroke-width="0.8" fill="none"
+					opacity="0.37" />
+
+			</svg>
+
+			<p>Мы очень хотим, чтобы именно ты был рядом в этот день.</p>
+			<p>Нас ждет природа, огоньки гирлянд и душевный искренний праздник.</p>
+		</div>
+
+		<svg class="wave-rule" viewBox="0 0 520 18" fill="none">
+			<path d="M0 9 Q65 3 130 9 Q195 15 260 9 Q325 3 390 9 Q455 15 520 9" stroke="#2C2418" stroke-width="1.2"
+				fill="none" opacity="0.2" stroke-linecap="round" />
+		</svg>
+
+		<!-- ══ КАК ПРОЙДЁТ ДЕНЬ ══ -->
+		<div class="section">
+			<span class="section-title">Как пройдёт день</span>
+			<svg viewBox="0 0 320 48" fill="none" xmlns="http://www.w3.org/2000/svg"
+				style="width:100%;max-width:320px;display:block;margin:0 auto 4px;">
+				<line x1="158" y1="4" x2="158" y2="46" stroke="#2C2418" stroke-width="2" opacity="0.25" />
+				<path d="M50 10 L148 10 L148 34 L50 34 L44 22Z" fill="#C8B48A" opacity="0.45" stroke="#8B6B4A"
+					stroke-width="1" />
+				<text x="97" y="26" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-style="italic"
+					font-size="12" fill="#2C2418" opacity="0.65">Церемония</text>
+				<path d="M168 16 L262 16 L268 27 L262 38 L168 38Z" fill="#9AA88F" opacity="0.45" stroke="#6B7A62"
+					stroke-width="1" />
+				<text x="216" y="31" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-style="italic"
+					font-size="12" fill="#2C2418" opacity="0.65">Банкет</text>
+			</svg>
+			<ul class="tl">
+				<li>
+					<span class="tl-time">15:00</span>
+					<div>
+						<div class="tl-name">Велком</div>
+						<p class="tl-desc">собираемся и знакомимся</p>
+					</div>
+				</li>
+				<li>
+					<span class="tl-time">16:00</span>
+					<div>
+						<div class="tl-name">Церемония</div>
+						<p class="tl-desc">самый важный момент дня</p>
+					</div>
+				</li>
+				<li>
+					<span class="tl-time">17:00</span>
+					<div>
+						<div class="tl-name">Банкет</div>
+						<p class="tl-desc">ужин и разговоры</p>
+					</div>
+				</li>
+				<li>
+					<span class="tl-time">20:30</span>
+					<div>
+						<div class="tl-name">Танцы</div>
+						<p class="tl-desc">тепло, улыбки и веселье</p>
+					</div>
+				<li>
+					<span class="tl-time">22:00</span>
+					<div>
+						<div class="tl-name">Костёр</div>
+						<p class="tl-desc">посиделки, уютные истории и финал вечера</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<svg class="wave-rule" viewBox="0 0 520 18" fill="none">
+			<path d="M0 9 Q65 3 130 9 Q195 15 260 9 Q325 3 390 9 Q455 15 520 9" stroke="#2C2418" stroke-width="1.2"
+				fill="none" opacity="0.2" stroke-linecap="round" />
+		</svg>
+
+		<!-- ══ ЧТО НАДЕТЬ ══ -->
+		<div class="section">
+			<span class="section-title">Что надеть</span>
+			<p>Будем рады, если поддержите нашу атмосферу - воздушные ткани и пастельные/мягкие оттенки. Белый оставим
+				для невесты :)</p>
+			<div class="swatches">
+				<div class="sw">
+					<div class="sw-dot" style="background:#DCCFB0;"></div>
+					<div class="sw-name">льняной</div>
+				</div>
+				<div class="sw">
+					<div class="sw-dot" style="background:#C8D8D0;"></div>
+					<div class="sw-name">голубой</div>
+				</div>
+				<div class="sw">
+					<div class="sw-dot" style="background:#E8C8C0;"></div>
+					<div class="sw-name">розовый</div>
+				</div>
+				<div class="sw">
+					<div class="sw-dot" style="background:#E8DDA8;"></div>
+					<div class="sw-name">желтый</div>
+				</div>
+				<div class="sw">
+					<div class="sw-dot" style="background:#B5684A;"></div>
+					<div class="sw-name">терракота</div>
+				</div>
+			</div>
+			<p class="small" style="margin-top:24px;">Для вашего удобства мы подобрали референсы.<br>Возьмите с собой
+				самую удобную обувь!</p>
+
+			<!-- REFS CAROUSEL (ПРАВКА 5) -->
+			<div class="refs-outer">
+				<!-- Добавляем стили для правильного отображения картинок в слайдере -->
+				<style>
+					.carousel-wrap {
+						display: flex !important;
+						flex-direction: row !important;
+						gap: 20px;
+						/* Расстояние между колонками, если нужно */
+					}
+
+					.carousel-col {
+						flex: 1 !important;
+						/* Обе колонки (для неё / для него) будут строго одинаковой ширины */
+						display: flex !important;
+						flex-direction: column !important;
+					}
+
+					.carousel-track {
+						display: flex !important;
+						flex-direction: row !important;
+						transition: transform 0.3s ease;
+						width: 100% !important;
+					}
+
+					.ref-slide {
+						flex: 0 0 100% !important;
+						width: 100% !important;
+						max-width: 100% !important;
+						height: 440px !important;
+						/* Задаем одинаковую высоту под формат мужских фото */
+						box-sizing: border-box;
+						overflow: hidden;
+						/* Скрывает лишнее, если картинка не влезает */
+					}
+
+					.ref-slide img {
+						width: 100% !important;
+						height: 100% !important;
+						object-fit: cover !important;
+						/* Женские фото подрежутся под формат мужских без деформации */
+					}
+				</style>
+
+				<div class="carousel-wrap">
+					<!-- WOMEN -->
+					<div class="carousel-col" id="col-women">
+						<span class="refs-col-label">для неё</span>
+						<div class="carousel-track" id="track-women">
+							<!-- slide 1 -->
+							<div class="ref-slide">
+								<img src="https://i.pinimg.com/736x/47/b3/7f/47b37f2a6fcf000f8c0a42395edecffe.jpg"
+									alt="для неё 1">
+							</div>
+							<!-- slide 2 -->
+							<div class="ref-slide">
+								<img src="https://i.pinimg.com/474x/79/c0/89/79c089988c2c4a2a35b5cdd39f509544.jpg"
+									alt="для неё 2">
+							</div>
+							<!-- slide 3 -->
+							<div class="ref-slide">
+								<img src="https://i.pinimg.com/474x/0d/37/35/0d37354b2553b0de2ec4b768ddee6b7f.jpg"
+									alt="для неё 3">
+							</div>
+						</div>
+						<div class="carousel-dots" id="dots-women">
+							<span class="active"></span><span></span><span></span>
+						</div>
+					</div>
+
+					<!-- MEN -->
+					<div class="carousel-col" id="col-men">
+						<span class="refs-col-label">для него</span>
+						<div class="carousel-track" id="track-men">
+							<!-- slide 1 -->
+							<div class="ref-slide">
+								<img src="https://i.pinimg.com/736x/cb/b1/d6/cbb1d6c0f16312a14d3d7daea40b3eba.jpg"
+									alt="для него 1">
+							</div>
+							<!-- slide 2 -->
+							<div class="ref-slide">
+								<img src="https://i.pinimg.com/736x/49/8b/31/498b31848caaa142d7ec1e2c0b67ad56.jpg"
+									alt="для него 2">
+							</div>
+							<!-- slide 3 -->
+							<div class="ref-slide">
+								<img src="https://i.pinimg.com/736x/c3/2a/a8/c32aa8cd805f637dbe0bdc9175e90673.jpg"
+									alt="для него 3">
+							</div>
+						</div>
+						<div class="carousel-dots" id="dots-men">
+							<span class="active"></span><span></span><span></span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+
+		<svg class="wave-rule" viewBox="0 0 520 18" fill="none">
+			<path d="M0 9 Q65 3 130 9 Q195 15 260 9 Q325 3 390 9 Q455 15 520 9" stroke="#2C2418" stroke-width="1.2"
+				fill="none" opacity="0.2" stroke-linecap="round" />
+		</svg>
+
+		<!-- ══ ЛОТЕРЕЙНЫЙ БИЛЕТ ══ -->
+		<div class="section">
+			<svg viewBox="0 0 280 90" fill="none" xmlns="http://www.w3.org/2000/svg"
+				style="width:240px;display:block;margin:0 auto 22px;">
+				<g transform="rotate(-2,140,45)">
+					<rect x="10" y="8" width="260" height="72" rx="5" stroke="#8B6B4A" stroke-width="1.5" fill="#F5F0E8"
+						opacity="0.95" />
+					<line x1="94" y1="8" x2="94" y2="80" stroke="#8B6B4A" stroke-width="0.8" stroke-dasharray="4 3"
+						opacity="0.3" />
+					<text x="52" y="36" text-anchor="middle" font-family="'Cormorant Garamond',serif"
+						font-style="italic" font-size="15" fill="#8B6B4A" opacity="0.8">лотерея</text>
+					<text x="52" y="58" text-anchor="middle" font-family="'Caveat',cursive" font-size="22"
+						fill="#8B6B4A" opacity="0.6">★</text>
+					<rect x="106" y="24" width="32" height="24" rx="3" fill="#8B6B4A" opacity="0.45" stroke="#8B6B4A"
+						stroke-width="0.8" />
+					<rect x="146" y="24" width="32" height="24" rx="3" fill="#8B6B4A" opacity="0.45" stroke="#8B6B4A"
+						stroke-width="0.8" />
+					<rect x="186" y="24" width="32" height="24" rx="3" fill="#8B6B4A" opacity="0.45" stroke="#8B6B4A"
+						stroke-width="0.8" />
+					<text x="122" y="40" text-anchor="middle" font-family="'Caveat',cursive" font-size="14"
+						fill="#5C4A32" opacity="0.5">?</text>
+					<text x="162" y="40" text-anchor="middle" font-family="'Caveat',cursive" font-size="14"
+						fill="#5C4A32" opacity="0.5">★</text>
+					<text x="202" y="40" text-anchor="middle" font-family="'Caveat',cursive" font-size="14"
+						fill="#5C4A32" opacity="0.5">?</text>
+					<path d="M106 58 Q160 55 218 58" stroke="#8B6B4A" stroke-width="0.7" fill="none" opacity="0.3" />
+				</g>
+			</svg>
+			<p>Вместо цветов захватите лотерейный билетик, вдруг нам повезет :)</p>
+			<p style="margin-top:16px;font-style:italic;opacity:0.7;">Лучший подарок - ваше присутствие и хорошее
+				настроение. Если хотите сделать подарок дополнительно - будем рады вкладу в наше будущее путешествие!
+			</p>
+		</div>
+
+		<svg class="wave-rule" viewBox="0 0 520 18" fill="none">
+			<path d="M0 9 Q65 3 130 9 Q195 15 260 9 Q325 3 390 9 Q455 15 520 9" stroke="#2C2418" stroke-width="1.2"
+				fill="none" opacity="0.2" stroke-linecap="round" />
+		</svg>
+
+		<!-- ══ ТРАНСФЕР ══ -->
+		<div class="section">
+			<span class="section-title">Трансфер</span>
+			<svg viewBox="0 0 220 80" fill="none" xmlns="http://www.w3.org/2000/svg"
+				style="width:180px;display:block;margin:0 auto 18px;">
+				<path d="M10 68 Q110 66 210 68" stroke="#2C2418" stroke-width="0.8" fill="none" opacity="0.18" />
+				<path d="M30 60 Q32 44 50 36 Q80 26 110 28 Q140 30 160 36 Q178 44 182 60Z" stroke="#2C2418"
+					stroke-width="1.5" fill="#F5F0E8" opacity="0.95" />
+				<path d="M68 36 Q74 28 96 28 Q108 28 118 34" stroke="#2C2418" stroke-width="1.2" fill="none" />
+				<path d="M120 34 Q138 30 152 36" stroke="#2C2418" stroke-width="1.2" fill="none" />
+				<line x1="118" y1="28" x2="120" y2="60" stroke="#2C2418" stroke-width="1" opacity="0.35" />
+				<circle cx="62" cy="62" r="10" stroke="#2C2418" stroke-width="1.5" fill="#F5F0E8" />
+				<circle cx="62" cy="62" r="4" stroke="#2C2418" stroke-width="1" fill="none" opacity="0.35" />
+				<circle cx="152" cy="62" r="10" stroke="#2C2418" stroke-width="1.5" fill="#F5F0E8" />
+				<circle cx="152" cy="62" r="4" stroke="#2C2418" stroke-width="1" fill="none" opacity="0.35" />
+				<rect x="170" y="54" width="38" height="14" rx="2" stroke="#2C2418" stroke-width="1" fill="#F5F0E8" />
+				<text x="189" y="64" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-style="italic"
+					font-size="8" fill="#2C2418" opacity="0.9">just married</text>
+				<path d="M170 62 Q162 68 155 74" stroke="#2C2418" stroke-width="0.8" fill="none" opacity="0.35" />
+				<path d="M175 66 Q168 72 162 78" stroke="#2C2418" stroke-width="0.8" fill="none" opacity="0.3" />
+				<circle cx="100" cy="24" r="3" stroke="#2C2418" stroke-width="1" fill="none" />
+				<circle cx="100" cy="24" r="1.2" fill="#2C2418" opacity="0.3" />
+				<circle cx="108" cy="22" r="2.5" stroke="#2C2418" stroke-width="1" fill="none" />
+				<circle cx="92" cy="22" r="2.5" stroke="#2C2418" stroke-width="1" fill="none" />
+			</svg>
+			<p>Для иногородних гостей будут организованы трансфер и размещение, за это можете не беспокоиться.</p>
+			<p class="small" style="margin-top:8px;opacity:0.6;">*подробности сообщим ближе к дате.</p>
+		</div>
+
+		<svg class="wave-rule" viewBox="0 0 520 18" fill="none">
+			<path d="M0 9 Q65 3 130 9 Q195 15 260 9 Q325 3 390 9 Q455 15 520 9" stroke="#2C2418" stroke-width="1.2"
+				fill="none" opacity="0.2" stroke-linecap="round" />
+		</svg>
+
+		<!-- ══ КООРДИНАТЫ (ПРАВКА 8) ══ -->
+		<div class="section">
+			<span class="section-title">Как добраться</span>
+			<p class="small" style="margin-bottom:16px;opacity:0.7;">Деревня Шипаково, Тюменская область</p>
+			<div class="map-wrap">
+				<!-- Яндекс Карты — замените координаты на точные -->
+				<iframe
+					src="https://yandex.ru/map-widget/v1/?ll=68.7194%2C56.9780&z=13&pt=68.7194,56.9780,pm2rdm&text=%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BD%D1%8F+%D0%A8%D0%B8%D0%BF%D0%B0%D0%BA%D0%BE%D0%B2%D0%BE%2C+%D0%A2%D1%8E%D0%BC%D0%B5%D0%BD%D1%81%D0%BA%D0%B0%D1%8F+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C"
+					allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+					title="Карта места свадьбы">
+				</iframe>
+				<div class="map-label">
+					<svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+						<circle cx="7" cy="6" r="4" stroke="#5A4A38" stroke-width="1.2" />
+						<path d="M7 10 Q7 13 7 13" stroke="#5A4A38" stroke-width="1.2" stroke-linecap="round" />
+					</svg>
+					Деревня Шипаково · Тюменская область
+				</div>
+			</div>
+		</div>
+
+		<svg class="wave-rule" viewBox="0 0 520 18" fill="none">
+			<path d="M0 9 Q65 3 130 9 Q195 15 260 9 Q325 3 390 9 Q455 15 520 9" stroke="#2C2418" stroke-width="1.2"
+				fill="none" opacity="0.2" stroke-linecap="round" />
+		</svg>
+
+		<!-- ══ RSVP (ПРАВКА 6) ══ -->
+		<div class="section">
+			<div class="rsvp-box">
+				<svg viewBox="0 0 440 8" fill="none" style="width:100%;display:block;margin-bottom:20px;">
+					<path d="M8 4 Q220 2 432 4" stroke="#2C2418" stroke-width="0.8" fill="none" opacity="0.18"
+						stroke-linecap="round" />
+				</svg>
+				<h3>Ждём ваш ответ</h3>
+				<p>Пожалуйста, дайте знать до <em>17.06.2026</em> — нам важно знать, что вы будете.</p>
+
+				<div class="form-row" style="margin-top:24px;">
+					<label>Ваше имя</label>
+					<input type="text" id="rsvp-name" placeholder="Имя и фамилия" />
+				</div>
+				<div class="form-row">
+					<label>Количество гостей</label>
+					<select id="rsvp-count">
+						<option value="">выберите</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+					</select>
+				</div>
+				<div class="form-row">
+					<label>Присутствие</label>
+					<select id="rsvp-attend">
+						<option value="">выберите</option>
+						<option>Буду с радостью</option>
+						<option>К сожалению, не смогу</option>
+					</select>
+				</div>
+				<div class="form-row">
+					<label>Пожелания / комментарий</label>
+					<textarea id="rsvp-comment" placeholder="необязательно"></textarea>
+				</div>
+
+				<button class="form-submit" onclick="submitRSVP()">ОТПРАВИТЬ</button>
+				<div class="status-msg" id="rsvp-status"></div>
+				<svg viewBox="0 0 440 8" fill="none" style="width:100%;display:block;margin-top:20px;">
+					<path d="M8 4 Q220 6 432 4" stroke="#2C2418" stroke-width="0.8" fill="none" opacity="0.18"
+						stroke-linecap="round" />
+				</svg>
+			</div>
+		</div>
+
+		<svg class="wave-rule" viewBox="0 0 520 18" fill="none">
+			<path d="M0 9 Q65 3 130 9 Q195 15 260 9 Q325 3 390 9 Q455 15 520 9" stroke="#2C2418" stroke-width="1.2"
+				fill="none" opacity="0.2" stroke-linecap="round" />
+		</svg>
+
+		<!-- ══ ОПРОС ПО АЛКОГОЛЮ (ПРАВКА 7) ══ -->
+		<div class="section">
+			<span class="section-title">Что будете пить?</span>
+			<p style="margin-bottom:4px;">Отметьте предпочтения, чтобы мы всё подготовили</p>
+
+			<div class="poll-options" id="poll-options">
+				<div class="poll-option" onclick="togglePoll(this,'Вино')">
+					<div class="poll-check"></div>Вино
+				</div>
+				<div class="poll-option" onclick="togglePoll(this,'Шампанское')">
+					<div class="poll-check"></div>Шампанское
+				</div>
+				<div class="poll-option" onclick="togglePoll(this,'Водка')">
+					<div class="poll-check"></div>Водка
+				</div>
+				<div class="poll-option" onclick="togglePoll(this,'Виски')">
+					<div class="poll-check"></div>Коньяк
+				</div>
+				<div class="poll-option" onclick="togglePoll(this,'Не буду пить')">
+					<div class="poll-check"></div>Не буду пить
+				</div>
+			</div>
+
+			<button class="form-submit" style="margin-top:20px;" onclick="submitPoll()">ОТПРАВИТЬ ОТВЕТ</button>
+			<div class="status-msg" id="poll-status"></div>
+		</div>
+
+		<svg class="wave-rule" viewBox="0 0 520 18" fill="none">
+			<path d="M0 9 Q65 3 130 9 Q195 15 260 9 Q325 3 390 9 Q455 15 520 9" stroke="#2C2418" stroke-width="1.2"
+				fill="none" opacity="0.2" stroke-linecap="round" />
+		</svg>
+
+		<!-- ══ FOOTER ══ -->
+		<footer>
+			<svg viewBox="0 0 420 160" fill="none" xmlns="http://www.w3.org/2000/svg"
+				style="width:100%;max-width:420px;display:block;margin:0 auto 32px;">
+				<defs>
+					<filter id="j2">
+						<feTurbulence type="fractalNoise" baseFrequency="0.055" numOctaves="3" seed="11" result="n" />
+						<feDisplacementMap in="SourceGraphic" in2="n" scale="1.8" xChannelSelector="R"
+							yChannelSelector="G" />
+					</filter>
+				</defs>
+				<g filter="url(#j2)">
+					<path d="M20 90 Q210 85 400 90" stroke="#2C2418" stroke-width="1" fill="none" opacity="0.3" />
+					<path d="M30 100 Q210 96 390 100" stroke="#2C2418" stroke-width="0.8" fill="none" opacity="0.18" />
+					<path d="M40 88 Q100 78 160 84 Q200 79 260 82 Q310 76 380 84" stroke="#2C2418" stroke-width="0.8"
+						fill="none" opacity="0.2" />
+					<line x1="70" y1="100" x2="68" y2="42" stroke="#2C2418" stroke-width="1.4" opacity="0.65" />
+					<line x1="84" y1="100" x2="86" y2="38" stroke="#2C2418" stroke-width="1.2" opacity="0.6" />
+					<line x1="96" y1="100" x2="94" y2="44" stroke="#2C2418" stroke-width="1.3" opacity="0.55" />
+					<line x1="108" y1="100" x2="110" y2="48" stroke="#2C2418" stroke-width="1.1" opacity="0.5" />
+					<path d="M55 50 Q68 38 80 42 Q74 32 80 28 Q86 22 92 30 Q96 22 104 28 Q108 20 116 28 Q122 36 118 44"
+						stroke="#2C2418" stroke-width="1.2" fill="none" opacity="0.55" />
+					<path d="M56 52 Q70 46 84 50 Q90 40 98 46 Q106 38 118 46 Q120 52 116 56" stroke="#2C2418"
+						stroke-width="1" fill="none" opacity="0.35" />
+					<line x1="295" y1="100" x2="293" y2="46" stroke="#2C2418" stroke-width="1.3" opacity="0.6" />
+					<line x1="308" y1="100" x2="310" y2="40" stroke="#2C2418" stroke-width="1.2" opacity="0.55" />
+					<line x1="320" y1="100" x2="318" y2="48" stroke="#2C2418" stroke-width="1.4" opacity="0.65" />
+					<line x1="334" y1="100" x2="336" y2="44" stroke="#2C2418" stroke-width="1.1" opacity="0.5" />
+					<line x1="348" y1="100" x2="346" y2="50" stroke="#2C2418" stroke-width="1.2" opacity="0.55" />
+					<path d="M282 54 Q293 40 306 46 Q308 34 318 32 Q326 26 334 36 Q338 28 348 34 Q356 44 352 52"
+						stroke="#2C2418" stroke-width="1.2" fill="none" opacity="0.55" />
+					<path d="M284 56 Q296 50 310 54 Q316 42 328 48 Q336 40 350 50 Q352 56 348 60" stroke="#2C2418"
+						stroke-width="1" fill="none" opacity="0.35" />
+					<line x1="205" y1="100" x2="205" y2="80" stroke="#2C2418" stroke-width="2" opacity="0.5" />
+					<line x1="215" y1="100" x2="215" y2="82" stroke="#2C2418" stroke-width="1.8" opacity="0.45" />
+					<circle cx="205" cy="76" r="5" fill="#2C2418" opacity="0.4" />
+					<circle cx="215" cy="78" r="4.5" fill="#2C2418" opacity="0.35" />
+					<path d="M218 78 Q224 82 222 88" stroke="#2C2418" stroke-width="0.8" fill="none" opacity="0.25" />
+					<path d="M130 56 Q210 66 290 56" stroke="#2C2418" stroke-width="0.7" fill="none" opacity="0.25" />
+					<circle cx="150" cy="60" r="1.5" fill="#2C2418" opacity="0.25" />
+					<circle cx="175" cy="64" r="1.5" fill="#2C2418" opacity="0.25" />
+					<circle cx="200" cy="66" r="1.5" fill="#2C2418" opacity="0.25" />
+					<circle cx="225" cy="64" r="1.5" fill="#2C2418" opacity="0.25" />
+					<circle cx="250" cy="61" r="1.5" fill="#2C2418" opacity="0.25" />
+					<circle cx="272" cy="58" r="1.5" fill="#2C2418" opacity="0.25" />
+				</g>
+			</svg>
+			<div style="font-family:'Caveat',cursive;font-size:42px;font-weight:600;color:#2C2418;margin-bottom:8px;">
+				Александр &amp; София</div>
+			<span class="footer-sub">2026</span>
+		</footer>
+
+	</div><!-- /page -->
+
+	<script>
+		// ── CAROUSEL ──
+		function initCarousel(trackId, dotsId) {
+			const track = document.getElementById(trackId);
+			const dots = document.getElementById(dotsId).querySelectorAll('span');
+			let current = 0;
+			const total = track.children.length;
+			let startX = 0;
+			let dragging = false;
+
+			function goTo(i) {
+				current = (i + total) % total;
+				track.style.transform = 'translateX(-' + (current * 100) + '%)';
+				dots.forEach((d, idx) => d.classList.toggle('active', idx === current));
+			}
+
+			track.addEventListener('mousedown', e => { startX = e.clientX; dragging = true; });
+			track.addEventListener('mousemove', e => { if (!dragging) return; });
+			track.addEventListener('mouseup', e => {
+				if (!dragging) return;
+				dragging = false;
+				const dx = e.clientX - startX;
+				if (dx < -40) goTo(current + 1);
+				else if (dx > 40) goTo(current - 1);
+			});
+			track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+			track.addEventListener('touchend', e => {
+				const dx = e.changedTouches[0].clientX - startX;
+				if (dx < -40) goTo(current + 1);
+				else if (dx > 40) goTo(current - 1);
+			}, { passive: true });
+
+			dots.forEach((d, i) => d.addEventListener('click', () => goTo(i)));
+		}
+
+		initCarousel('track-women', 'dots-women');
+		initCarousel('track-men', 'dots-men');
+
+		// ── POLL (Выбор алкоголя) ──
+		const pollSelected = new Set();
+
+		function togglePoll(el, value) {
+			el.classList.toggle('selected');
+			if (pollSelected.has(value)) pollSelected.delete(value);
+			else pollSelected.add(value);
+		}
+
+		// ── GOOGLE SHEETS SUBMIT ──
+		// ВСТАВЬТЕ СЮДА ВАШУ ССЫЛКУ ИЗ GOOGLE APPS SCRIPT
+		const SHEET_URL = 'https://script.google.com/macros/s/AKfycbw-_002H4fkssz9yXFBNPbQLG1O82TtbfW1At_k9y6L9l3NoCF_rqm_rY7SEouIz7oG/exec';
+
+		// Функция сбора всех данных с формы в один объект
+		function collectFormData() {
+			const name = document.getElementById('rsvp-name').value.trim();
+			const count = document.getElementById('rsvp-count').value;
+			const attend = document.getElementById('rsvp-attend').value;
+			const comment = document.getElementById('rsvp-comment').value.trim();
+
+			// Собираем алкоголь через запятую. Если ничего не выбрано — отправляем пустую строку
+			const drinks = pollSelected.size > 0 ? [...pollSelected].join(', ') : '';
+
+			return {
+				name,
+				count,
+				attend,
+				comment,
+				drinks,
+				ts: new Date().toLocaleString('ru-RU') // Красивый формат даты: ДД.ММ.ГГГГ, ЧЧ:ММ:СС
+			};
+		}
+
+		// Базовая функция отправки в таблицу
+		async function sendToGoogleSheets(data) {
+			try {
+				await fetch(SHEET_URL, {
+					method: 'POST',
+					mode: 'no-cors',
+					headers: { 'Content-Type': 'application/json' },
+					body: JSON.stringify(data)
+				});
+				return true;
+			} catch (e) {
+				console.error(e);
+				return false;
+			}
+		}
+
+		// Обработчик для кнопки RSVP
+		async function submitRSVP() {
+			const data = collectFormData();
+			const status = document.getElementById('rsvp-status');
+
+			// Валидация: имя и присутствие обязательны всегда
+			if (!data.name || !data.attend) {
+				status.textContent = 'Пожалуйста, заполните имя и отметьте присутствие.';
+				status.style.color = "red";
+				return;
+			}
+
+			status.textContent = 'Отправляем...';
+			status.style.color = "gray";
+
+			const ok = await sendToGoogleSheets(data);
+
+			if (ok) {
+				status.textContent = 'Спасибо! Ждём тебя с нетерпением.';
+				status.style.color = "green";
+
+				// Опционально: дублируем статус во вторую форму, если гость нажал первую кнопку
+				const pollStatus = document.getElementById('poll-status');
+				if (pollStatus) pollStatus.textContent = '';
+			} else {
+				status.textContent = 'Что-то пошло не так. Напишите нам напрямую.';
+				status.style.color = "red";
+			}
+		}
+
+		// Обработчик для кнопки Алкоголя
+		async function submitPoll() {
+			const data = collectFormData();
+			const status = document.getElementById('poll-status');
+
+			// Если человек жмет отправку алкоголя, проверяем, заполнил ли он основные поля RSVP
+			if (!data.name || !data.attend) {
+				status.textContent = 'Пожалуйста, сначала заполните форму RSVP (Имя и Присутствие) выше.';
+				status.style.color = "red";
+
+				// Подсвечиваем ошибку и в первой форме, чтобы гость заметил
+				const rsvpStatus = document.getElementById('rsvp-status');
+				if (rsvpStatus) {
+					rsvpStatus.textContent = 'Пожалуйста, заполните имя и отметьте присутствие.';
+					rsvpStatus.style.color = "red";
+				}
+				return;
+			}
+
+			status.textContent = 'Отправляем...';
+			status.style.color = "gray";
+
+			const ok = await sendToGoogleSheets(data);
+
+			if (ok) {
+				status.textContent = 'Спасибо, всё учтём!';
+				status.style.color = "green";
+
+				// Синхронизируем статус с верхней формой
+				const rsvpStatus = document.getElementById('rsvp-status');
+				if (rsvpStatus) {
+					rsvpStatus.textContent = 'Спасибо! Ждём тебя с нетерпением.';
+					rsvpStatus.style.color = "green";
+				}
+			} else {
+				status.textContent = 'Что-то пошло не так. Напишите нам напрямую.';
+				status.style.color = "red";
+			}
+		}
+
+	</script>
+</body>
+
+</html>
